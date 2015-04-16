@@ -188,8 +188,8 @@ $(function() {
                   param		= {
                     width	  : '100px',
                     height	: '100px',
-                    top		: 90 + 100 * Math.floor(i/8),
-                    left	: 100 + 100 * (i%8),
+                    top		: 150 + 100 * Math.floor(i/8),
+                    left	: 150 + 100 * (i%8),
                     opacity	: 0.9
                   };
                   param.rotate	= '0deg';

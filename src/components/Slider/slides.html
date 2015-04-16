@@ -3,16 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>AngularJS Animate Slider</title>
-
     <link href="bootstrap.css" rel="stylesheet">
-    <!--<link rel="stylesheet" href="css/styles.css">-->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body ng-controller="MainCtrl">
 
 <div class="container slider">
-    <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
-         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+  <div class="container slider">
+    <img ng-repeat="slide in slides" class="slide slide-animation"
          ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
 
     <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
