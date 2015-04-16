@@ -28,16 +28,28 @@ img.mb_bgimage{
 	z-index:2;
 }
 .mb_boxes{
-
+  -webkit-transition: all 0.5s ease;
+  -moz-transition:all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -transition: all 0.5s ease;
+  transition: all 0.5s ease;
   opacity: 1;
-
 }
+.mb_pattern div :hover{
+  background: white;
+}
+
 .mb_pattern div{
 	position:absolute;
 	width:3em;
 	height:3em;
 	background:#000;
 	z-index:10;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition:all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .mb_heading h1{
 	position:absolute;
@@ -94,14 +106,23 @@ img.mb_bgimage{
 	line-height:5em;
 	text-align:center;
 	outline:none;
-	-webkit-transition: all 0.2s ease-in;
-	-moz-transition:all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .mb_menu a:hover{
 	color:#000;
 	background-color:#fff;
+  padding-left: 0.5em;
+}
+
+.mb_menu :hover{
+  color:#000;
+  background-color:#fff;
+  padding-left: 1em;
+  width: 8em;
 }
 .mb_content_wrapper{
 	background:transparent url(../../assets/img/white_wall.png) repeat top left;
@@ -109,8 +130,8 @@ img.mb_bgimage{
 	width:800px;
 	height:400px;
 	position:absolute;
-	top:90px;
-	left:100px;
+	top:150px;
+	left:150px;
 	z-index:4;
 	display:none;
 }
