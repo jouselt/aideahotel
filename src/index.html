@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html ng-app="website">
+
+
+  <head>
+    <meta charset="utf-8">
+    <title>AIDEA Hotel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!--<link type="text/css" href="./components/boxes/jquery.jscrollpane.css" rel="stylesheet" media="all" />-->
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic' rel='stylesheet' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
+    <link type="text/css" href="../src/app/index.css">
+    <link href="components/angular-photo-slider/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="components/boxes/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </head>
+
+  <body ng-controller="SlideCtrl" >
+
+  <!--[if lt IE 10]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div id="mb_background" class="mb_background">
+    <img class="mb_bgimage" src="./assets/images/beautiful.jpg" alt="Background"/>
+    <div class="mb_overlay"></div>
+    <div class="mb_loading"></div>
+  </div>
+
+  <div id="mb_pattern" class="mb_pattern"></div>
+  <div class="mb_heading">
+    <h1 class="text-center">Hotel AIDEA</h1>
+  </div>
+  <div id="mb_menu" class="mb_menu">
+    <a href="#" data-speed="1000" data-easing="easeOutBack" class = "mb_Menu_hot">El Hotel</a>
+    <a href="#" data-speed="1000" data-easing="easeInExpo" class = "mb_Menu_ser">Instalaciones</a>
+    <a href="#" data-speed="1000" data-easing="easeOutBack" class = "mb_Menu_hab">Habitaciones</a>
+    <a href="#" data-speed="1000" data-easing="easeOutBack" class = "mb_Menu_con">Contacto</a>
+  </div>
+
+  <div id="mb_content_wrapper" class="mb_content_wrapper">
+    <span class="mb_close"></span>
+    <div class="mb_content">
+      <h2>Sobre Nosotros</h2>
+      <div class="mb_content_inner">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+          elit. Aenean commodo ligula eget dolor. Aenean massa
+          <strong>strong</strong>. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus
+          mus. Donec quam felis, ultricies nec, pellentesque
+          eu, pretium quis, sem. Nulla consequat massa quis
+          enim. Donec pede justo, fringilla vel, aliquet nec,
+          vulputate eget, arcu. In enim justo, rhoncus ut,
+          imperdiet a, venenatis vitae, justo. Nullam dictum
+          felis eu pede <a class="external ext" href="#">link</a>
+          mollis pretium. Integer tincidunt. Cras dapibus.
+          Vivamus elementum semper nisi. Aenean vulputate
+          eleifend tellus. Aenean leo ligula, porttitor eu,
+          consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+          dapibus in, viverra quis, feugiat a, tellus. Phasellus
+          viverra nulla ut metus varius laoreet. Quisque rutrum.
+          Aenean imperdiet. Etiam ultricies nisi vel augue.
+          Curabitur ullamcorper ultricies nisi.</p>
+      </div>
+    </div>
+    <div class="mb_content">
+      <h2>Nuestras Instalaciones</h2>
+
+        <div class="slider" ng-repeat="slide in slides" >
+          {{slide.description}}
+          <img class="slide" ng-src="{{slide.image}}"/>
+        </div>
+
+
+    </div>
+    <div class="mb_content">
+      <h2>Habitaciones</h2>
+      <div class="mb_content_inner">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+          elit. Aenean commodo ligula eget dolor. Aenean massa
+          <strong>strong</strong>. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus
+          mus. Donec quam felis, ultricies nec, pellentesque
+          eu, pretium quis, sem. Nulla consequat massa quis
+          enim. Donec pede justo, fringilla vel, aliquet nec,
+          vulputate eget, arcu. In enim justo, rhoncus ut,
+          imperdiet a, venenatis vitae, justo. Nullam dictum
+          felis eu pede <a class="external ext" href="#">link</a>
+          mollis pretium. Integer tincidunt. Cras dapibus.
+          Vivamus elementum semper nisi. Aenean vulputate
+          eleifend tellus. Aenean leo ligula, porttitor eu,
+          consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+          dapibus in, viverra quis, feugiat a, tellus. Phasellus
+          viverra nulla ut metus varius laoreet. Quisque rutrum.
+          Aenean imperdiet. Etiam ultricies nisi vel augue.
+          Curabitur ullamcorper ultricies nisi.</p>
+      </div>
+    </div>
+    <div class="mb_content">
+      <h2>Contacto</h2>
+        <div class="mb_content_inner">
+          <br>
+          <p>Puede contactarnos a los numeros <strong>0996432723</strong> y
+          <strong>(02) 2263268</strong>  y escribiendo al mail
+          <strong> info@aideacorp.com </strong> </p>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- The JavaScript -->
+  <script src="http://code.jquery.com/jquery-1.7.0.js"></script>
+  <script type="text/javascript" src="components/boxes/jquery.easing.1.3.js"></script>
+  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>-->
+  <!-- the mousewheel plugin - optional to provide mousewheel support -->
+  <script type="text/javascript" src="components/boxes/jquery.mousewheel.js"></script>
+  <!-- the jScrollPane script -->
+  <script type="text/javascript" src="components/boxes/jquery.jscrollpane.min.js"></script>
+  <script type="text/javascript" src="components/boxes/jquery.transform-0.9.3.min_.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  <script src="./app/index.js"></script>
+
+  <!-- The angular-->
+
+  <script src="https://code.angularjs.org/1.2.28/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+  <script src="https://code.angularjs.org/1.2.28/angular-animate.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+  <script src="app/slides.js"></script>
+
+  </body>
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</html>
