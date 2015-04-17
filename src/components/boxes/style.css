@@ -234,7 +234,6 @@ ul.mb_imagelist li img:hover{
   padding: 0px;
   top: 0px;
   width: 15em;
-  text-align: center;
 }
 
 .box-hover:hover, .box-hover:focus {
@@ -242,9 +241,11 @@ ul.mb_imagelist li img:hover{
   -webkit-transform: translate(0, -15px);
   -ms-transform: translate(0, -15px);
 }
+
 .wrapper {
   height: 250px;
 }
+
 .nopadding {
   padding: 0;
 }

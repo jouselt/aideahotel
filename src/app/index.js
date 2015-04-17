@@ -151,7 +151,7 @@ $(function() {
         },
       /*
        changes the background zimage
-       */
+
         changeBGImage		= function(img) {
           //if its the current one return
           if($mb_bgimage.attr('src') === img || $mb_bgimage.siblings('img').length > 0)
@@ -166,6 +166,7 @@ $(function() {
           });
           $itemImage.fadeIn(1000);
         },
+       */
       /*
        This shows a content item when there is already one shown:
        */
