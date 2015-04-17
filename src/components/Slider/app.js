@@ -1,4 +1,4 @@
-angular.module('website', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial', 'ngMdIcons'])
+angular.module('website', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial', 'ngMdIcons', 'angular-flexslider'])
     .controller('MainCtrl', function ($scope) {
         $scope.slides = [
             {image: '../../assets/images/image00.jpg', description: 'Image 00'},
@@ -71,11 +71,7 @@ angular.module('website', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'n
             }
         };
     })
-
-
-
-
-.config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/',

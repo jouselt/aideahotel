@@ -230,6 +230,7 @@ ul.mb_imagelist li img:hover{
 .box-hover h3{
   text-align: center;
 }
+
 .jspPane {
   padding: 0px;
   top: 0px;
@@ -248,4 +249,12 @@ ul.mb_imagelist li img:hover{
 
 .nopadding {
   padding: 0;
+}
+
+.slides{
+  width: 1200%;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transform: translate3d(-843px, 0px, 0px);
+  transform: translate3d(-843px, 0px, 0px);
 }

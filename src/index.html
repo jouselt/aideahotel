@@ -7,15 +7,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <!--<link type="text/css" href="./components/boxes/jquery.jscrollpane.css" rel="stylesheet" media="all" />-->
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic' rel='stylesheet' />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
-    <link type="text/css" href="../src/app/index.css">
-    <link href="components/Slider/bootstrap.css" rel="stylesheet">
-    <link href="components/Slider/styles.css" rel="stylesheet">
-    <link type="text/css" href="components/boxes/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
+
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -83,67 +80,63 @@
     <div class="mb_content">
       <h2>Nuestras Instalaciones</h2>
 
-      <div class="slider">
-        <img ng-repeat="slide in slides" class="slide"
-             ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
-
-        <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
-        <a class="arrow next" href="#" ng-click="prevSlide()"></a>
-        <nav class="nav">
-          <div class="wrapper">
-            <ul class="dots">
-              <li class="dot" ng-repeat="slide in slides">
-                <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
-                   ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
-            </ul>
-          </div>
-        </nav>
+      <div flex="15"></div>
+      <div flex="70">
+        <div class="slider">
+          <img ng-repeat="slide in slides" class="slide" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+          <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
+          <a class="arrow next" href="#" ng-click="prevSlide()"></a>
+          <nav class="nav">
+            <div class="wrapper">
+              <ul class="dots">
+                <li class="dot" ng-repeat="slide in slides">
+                  <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
+                     ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
-
+      <div flex="15"></div>
     </div>
     <div class="mb_content">
       <h2>Habitaciones</h2>
       <div class="mb_content_inner">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
-          elit. Aenean commodo ligula eget dolor. Aenean massa
-          <strong>strong</strong>. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus
-          mus. Donec quam felis, ultricies nec, pellentesque
-          eu, pretium quis, sem. Nulla consequat massa quis
-          enim. Donec pede justo, fringilla vel, aliquet nec,
-          vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Nullam dictum
-          felis eu pede <a class="external ext" href="#">link</a>
-          mollis pretium. Integer tincidunt. Cras dapibus.
-          Vivamus elementum semper nisi. Aenean vulputate
-          eleifend tellus. Aenean leo ligula, porttitor eu,
-          consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          dapibus in, viverra quis, feugiat a, tellus. Phasellus
-          viverra nulla ut metus varius laoreet. Quisque rutrum.
-          Aenean imperdiet. Etiam ultricies nisi vel augue.
-          Curabitur ullamcorper ultricies nisi.</p>
+
+        <div layout="row" layout-margin>
+          <div flex flex-order="4" class="light-box box-hover">
+            <h3>Imperial Suit</h3>
+          </div>
+          <div flex flex-order="2" class="light-box box-hover">
+            <h3>Golden Suit</h3>
+          </div>
+          <div flex flex-order="3" class="light-box box-hover">
+            <h3>Family Suit</h3>
+          </div>
+          <div flex flex-order="1" class="light-box box-hover">
+            <h3>Single Suit</h3>
+          </div>
+
+        </div>
       </div>
     </div>
     <div class="mb_content">
       <h2>Contacto</h2>
         <div class="mb_content_inner">
-          <div layout="row" layout-sm="column" >
-
-            <div flex class="light-box box-hover">
+          <div layout="row" layout-sm="column" layout-align="center center" >
+            <div flex="10"></div>
+            <div flex="35" class="light-box box-hover">
               <h3><ng-md-icon icon="phone" style="fill: #0288D1" size="24px"></ng-md-icon><br>Teléfono</h3>
               <p style="text-align: center">(02) 2263268</p>
             </div>
-
-            <div flex class="light-box box-hover">
-
+            <div flex="10"></div>
+            <div flex="35" class="light-box box-hover">
               <h3><ng-md-icon icon="email" style="fill: #0288D1" size="24px"></ng-md-icon><br>Correo</h3>
               <p style="text-align: center">info@aideacorp.com</p>
             </div>
+            <div flex="10"></div>
           </div>
 
-          <!--<p>Puede contactarnos a los numeros <strong>0996432723</strong> y-->
-            <!--y escribiendo al mail-->
-          <!--<strong> info@aideacorp.com </strong> </p>-->
         </div>
       </div>
     </div>
