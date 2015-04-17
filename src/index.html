@@ -14,6 +14,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css' />
     <link type="text/css" href="../src/app/index.css">
     <link href="components/Slider/bootstrap.css" rel="stylesheet">
+    <link href="components/Slider/styles.css" rel="stylesheet">
     <link type="text/css" href="components/boxes/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -82,11 +83,22 @@
     <div class="mb_content">
       <h2>Nuestras Instalaciones</h2>
 
-        <div class="slider" ng-repeat="slide in slides" >
-          {{slide.description}}
-          <img class="slide" ng-src="{{slide.image}}"/>
-        </div>
+      <div class="slider">
+        <img ng-repeat="slide in slides" class="slide"
+             ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
 
+        <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
+        <a class="arrow next" href="#" ng-click="prevSlide()"></a>
+        <nav class="nav">
+          <div class="wrapper">
+            <ul class="dots">
+              <li class="dot" ng-repeat="slide in slides">
+                <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
+                   ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 
     </div>
     <div class="mb_content">
@@ -116,38 +128,57 @@
       <h2>Contacto</h2>
         <div class="mb_content_inner">
           <br>
-          <p>Puede contactarnos a los numeros <strong>0996432723</strong> y
-          <strong>(02) 2263268</strong>  y escribiendo al mail
-          <strong> info@aideacorp.com </strong> </p>
+          <div class="col-md-6">
+            <div class="light-box box-hover">
+              <h3><i style="font-size: 30px" class="fa fa-mobile"></i><span>Teléfono</span></h3>
+              <strong>(02) 2263268</strong>
+            </div>
+            <div class="light-box box-hover">
+              <h3> <i style="font-size: 30px" class="fa fa-email"></i><span>Correo</span></h3>
+              <strong>info@aideacorp.com</strong>
+            </div>
+          </div>
+          <!--<p>Puede contactarnos a los numeros <strong>0996432723</strong> y-->
+            <!--y escribiendo al mail-->
+          <!--<strong> info@aideacorp.com </strong> </p>-->
         </div>
       </div>
     </div>
 
 
   <!-- The JavaScript -->
-  <script src="http://code.jquery.com/jquery-1.7.0.js"></script>
-  <script type="text/javascript" src="components/boxes/jquery.easing.1.3.js"></script>
-  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>-->
-  <!-- the mousewheel plugin - optional to provide mousewheel support -->
-  <script type="text/javascript" src="components/boxes/jquery.mousewheel.js"></script>
-  <!-- the jScrollPane script -->
-  <script type="text/javascript" src="components/boxes/jquery.jscrollpane.min.js"></script>
-  <script type="text/javascript" src="components/boxes/jquery.transform-0.9.3.min_.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <!--<script type="text/javascript" src="components/boxes/jquery.easing.1.3.js"></script>-->
+  <!--&lt;!&ndash;<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>&ndash;&gt;-->
+  <!--&lt;!&ndash; the mousewheel plugin - optional to provide mousewheel support &ndash;&gt;-->
+  <!--<script type="text/javascript" src="components/boxes/jquery.mousewheel.js"></script>-->
+  <!--&lt;!&ndash; the jScrollPane script &ndash;&gt;-->
+  <!--<script type="text/javascript" src="components/boxes/jquery.jscrollpane.min.js"></script>-->
+  <!--<script type="text/javascript" src="components/boxes/jquery.transform-0.9.3.min_.js"></script>-->
 
-  <script src="./app/index.js"></script>
+
 
   <!-- The angular-->
 
-  <script src="https://code.angularjs.org/1.2.28/angular.min.js"></script>
-  <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
-  <script src="https://code.angularjs.org/1.2.28/angular-animate.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
-  <script src="components/Slider/app.js"></script>
+
+
 
   </body>
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- run `gulp inject` to automatically populate bower script dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- js files will be automatically insert here -->
+  <!-- endinject -->
+
   <!-- inject:partials -->
   <!-- angular templates will be automatically converted in js and inserted here -->
   <!-- endinject -->
   <!-- endbuild -->
+
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
 </html>

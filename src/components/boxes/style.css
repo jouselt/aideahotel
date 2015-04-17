@@ -130,7 +130,7 @@ img.mb_bgimage{
 	width:800px;
 	height:400px;
 	position:absolute;
-	top:150px;
+	top:100px;
 	left:150px;
 	z-index:4;
 	display:none;
@@ -197,4 +197,54 @@ ul.mb_imagelist li img{
 }
 ul.mb_imagelist li img:hover{
 	opacity:1.0;
+}
+
+.light-bg {
+  background-color: #fff;
+}
+.dark-box {
+  background: #f3f5f8;
+  -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
+  -moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
+  box-shadow: 0px 3px 0px 0px #f0f2f4;
+}
+.light-box {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
+  -moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
+  box-shadow: 0px 3px 0px 0px #f0f2f4;
+  padding: 20px 0;
+}
+.light-box:hover, .light-box:focus {
+  -webkit-box-shadow: 0px 3px 0px 0px #1A4E9F;
+  -moz-box-shadow: 0px 3px 0px 0px #1A4E9F;
+  box-shadow: 0px 3px 0px 0px #1A4E9F;
+}
+.box-hover {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+
+.box-hover h3{
+  text-align: center;
+}
+.jspPane {
+  padding: 0px;
+  top: 0px;
+  width: 15em;
+  text-align: center;
+}
+
+.box-hover:hover, .box-hover:focus {
+  transform: translate(0, -15px);
+  -webkit-transform: translate(0, -15px);
+  -ms-transform: translate(0, -15px);
+}
+.wrapper {
+  height: 250px;
+}
+.nopadding {
+  padding: 0;
 }

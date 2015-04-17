@@ -1,4 +1,4 @@
-angular.module('website', ['ngAnimate', 'ngTouch'])
+angular.module('website', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial'])
     .controller('MainCtrl', function ($scope) {
         $scope.slides = [
             {image: '../../assets/images/image00.jpg', description: 'Image 00'},
@@ -64,5 +64,18 @@ angular.module('website', ['ngAnimate', 'ngTouch'])
                 }
             }
         };
+    })
+
+
+
+
+.config(function ($stateProvider, $urlRouterProvider) {
+  $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: 'app/main/main.html',
+      controller: 'MainCtrl'
     });
 
+  $urlRouterProvider.otherwise('/');
+});

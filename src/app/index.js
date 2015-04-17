@@ -88,7 +88,7 @@ $(function() {
             //if (!$.browser.msie) {
               param.rotate = a + 'deg';
             //}
-            $el.animate(param, 1000, 'easeOutExpo');
+            $el.animate(param, 'slow', 'linear');
           });
         },
         initEventsHandler	= function() {
@@ -105,7 +105,7 @@ $(function() {
               //if current animating return
               if($menu.data('moving')) return false;
               $menu.data('moving', true);
-              $.when(openItem(pos, speed, easing)).done(function(){
+              $.when(openItem(pos, 'slow', 'linear')).done(function(){
                 $menu.data({
                   open	: true,
                   moving	: false
@@ -188,12 +188,12 @@ $(function() {
                   param		= {
                     width	  : '100px',
                     height	: '100px',
-                    top		: 150 + 100 * Math.floor(i/8),
+                    top		: 100 + 100 * Math.floor(i/8),
                     left	: 150 + 100 * (i%8),
                     opacity	: 0.9
                   };
                   param.rotate	= '0deg';
-                speed = "fast";
+                speed = "slow";
                 easing = "linear";
                 $el.animate(param, speed, easing, dfd.resolve);
 
